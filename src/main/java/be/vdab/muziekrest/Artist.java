@@ -1,2 +1,4 @@
-package be.vdab.muziekrest;public record Artist() {
+package be.vdab.muziekrest;
+
+record Artist(String name) {
 }

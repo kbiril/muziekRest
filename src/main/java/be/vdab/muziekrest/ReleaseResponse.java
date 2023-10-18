@@ -1,2 +1,4 @@
-package be.vdab.muziekrest;public record ReleaseResponseJson() {
+package be.vdab.muziekrest;
+
+record ReleaseResponse(long id, int year, String title, Artist[] artists) {
 }
