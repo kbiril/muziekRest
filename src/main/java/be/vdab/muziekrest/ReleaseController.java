@@ -14,7 +14,7 @@ class ReleaseController {
     }
 
     @GetMapping("{id}")
-    Release findById(@PathVariable long id) {
+    ReleaseResponse findById(@PathVariable long id) {
         return releaseClient.findById(id).orElseThrow(ReleaseNotFoundException::new);
     }
 }

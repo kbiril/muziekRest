@@ -19,8 +19,7 @@ public class ReleaseClient {
             var response = requests.findById(id);
 
             return Optional.of(new ReleaseResponse(response.id(), response.year(), response.title(),
-                    Arrays.stream(response.artists())
-                            .map(artist -> artist.name()).toList()));
+                    response.artists()));
         } catch (WebClientResponseException.NotFound ex) {
             return Optional.empty();
         }
